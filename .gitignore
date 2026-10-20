@@ -1,0 +1,89 @@
+# ==============================================================================
+# Build Tool (Gradle & Kotlin DSL)
+# ==============================================================================
+.gradle/
+.kotlin/
+build/
+out/
+
+# Compiled Archives (preserve Gradle Wrapper)
+*.jar
+*.war
+*.ear
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local Configuration
+local.properties
+
+# ==============================================================================
+# PaperMC & Local Test Server (run-paper / paperweight)
+# ==============================================================================
+run/
+run-*/
+.paperweight/
+
+# ==============================================================================
+# Spring, Environment & Local Databases
+# ==============================================================================
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+application-local.properties
+*.db
+*.mv.db
+*.trace.db
+*.sqlite
+*.sqlite3
+
+# ==============================================================================
+# JVM Diagnostics & Profiling
+# ==============================================================================
+hs_err_pid*
+replay_pid*
+*.hprof
+*.jfr
+*.log
+
+# ==============================================================================
+# IDEs & Editors
+# ==============================================================================
+# JetBrains IDEs (IntelliJ IDEA)
+.idea/
+*.iws
+*.iml
+*.ipr
+cmake-build-*/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse & NetBeans
+.classpath
+.project
+.settings/
+bin/
+nbproject/
+
+# ==============================================================================
+# Operating System
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
