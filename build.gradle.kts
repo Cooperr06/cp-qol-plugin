@@ -42,6 +42,7 @@ java {
 }
 
 paperPluginYaml {
+    name.set("CpQolPlugin")
     main.set("de.cooperr.cpqolplugin.CpQolPlugin")
     apiVersion.set("26.3")
     authors.add("Cooperr06")
