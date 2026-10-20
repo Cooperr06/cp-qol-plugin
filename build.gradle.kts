@@ -82,7 +82,7 @@ tasks {
         jvmArgs(
             "-Dcom.mojang.eula.agree=true",
             "-Xms2G",
-            "-Xmx4G"
+            "-Xmx4G",
         )
     }
 
