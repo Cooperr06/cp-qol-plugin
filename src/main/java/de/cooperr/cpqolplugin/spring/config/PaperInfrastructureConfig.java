@@ -1,4 +1,4 @@
-package de.cooperr.cpqolplugin.config;
+package de.cooperr.cpqolplugin.spring.config;
 
 import de.cooperr.cpqolplugin.CpQolPlugin;
 import org.bukkit.Server;

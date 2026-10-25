@@ -1,4 +1,4 @@
-package de.cooperr.cpqolplugin.bootstrap;
+package de.cooperr.cpqolplugin.spring.bootstrap;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

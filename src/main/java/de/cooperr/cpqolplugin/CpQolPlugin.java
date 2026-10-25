@@ -1,7 +1,7 @@
 package de.cooperr.cpqolplugin;
 
-import de.cooperr.cpqolplugin.bootstrap.SpringContextBootstrapper;
-import de.cooperr.cpqolplugin.config.PaperInfrastructureConfig;
+import de.cooperr.cpqolplugin.spring.bootstrap.SpringContextBootstrapper;
+import de.cooperr.cpqolplugin.spring.config.PaperInfrastructureConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class CpQolPlugin extends JavaPlugin {
