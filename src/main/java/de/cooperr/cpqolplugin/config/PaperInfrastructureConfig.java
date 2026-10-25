@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.logging.Logger;
-
 @Configuration
 @ComponentScan(basePackages = "de.cooperr.cpqolplugin")
 public class PaperInfrastructureConfig {
@@ -33,10 +31,5 @@ public class PaperInfrastructureConfig {
     @Bean
     public BukkitScheduler bukkitScheduler(Server server) {
         return server.getScheduler();
-    }
-
-    @Bean
-    public Logger logger(JavaPlugin plugin) {
-        return plugin.getLogger();
     }
 }

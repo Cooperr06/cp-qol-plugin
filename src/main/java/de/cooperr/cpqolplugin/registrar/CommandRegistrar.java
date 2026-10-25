@@ -3,24 +3,22 @@ package de.cooperr.cpqolplugin.registrar;
 import de.cooperr.cpqolplugin.command.PaperCommand;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Component
 public class CommandRegistrar implements SmartInitializingSingleton {
 
-    private final Logger logger;
+    private static final Logger log = LoggerFactory.getLogger(CommandRegistrar.class);
 
     private final JavaPlugin plugin;
     private final List<PaperCommand> commands;
 
-    public CommandRegistrar(Logger logger, JavaPlugin plugin, List<PaperCommand> commands) {
-        this.logger = logger;
-
+    public CommandRegistrar(JavaPlugin plugin, List<PaperCommand> commands) {
         this.plugin = plugin;
         this.commands = commands;
     }
@@ -31,9 +29,9 @@ public class CommandRegistrar implements SmartInitializingSingleton {
             var registrar = event.registrar();
             for (var command : commands) {
                 command.register(registrar);
-                logger.log(Level.FINE, "Registered command class: {0}", command.getClass().getSimpleName());
+                log.debug("Registered command class: {}", command.getClass().getSimpleName());
             }
         });
-        logger.log(Level.INFO, "Registered {0} commands", commands.size());
+        log.info("Registered {} commands", commands.size());
     }
 }
